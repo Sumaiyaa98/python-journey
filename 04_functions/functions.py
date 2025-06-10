@@ -65,3 +65,11 @@ print(sum_fun(1, 2))
 
 # 8. Function with **kwargs
 # Problem: Create a function that accepts any number of keyword arguments and prints them in the format key: value.
+
+def map_funtion(**kwargs):
+   for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+
+map_funtion(name = 'Alix',age = 29)
+map_funtion(name = 'Mike',age = 22,gpa=3.4)
