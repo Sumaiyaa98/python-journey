@@ -9,10 +9,10 @@ print(square(4))
 # 2. Function with Multiple Parameters
 # Problem: Create a function that takes two numbers as parameters and returns their sum.
 
-def sum(a,b):
+def num_sum(a,b):
    return int(a)+int(b)
 
-print(sum('2',3))
+print(num_sum('2',3))
 
 
 # 3. Polymorphism in Functions
@@ -55,3 +55,10 @@ print(cube(2))
 # 7. Function with *args
 # Problem: Write a function that takes variable number of arguments and returns their sum.
 
+def sum_fun(*args):
+    # print(args)
+    # for i in args:
+    #     print(i * 2)
+    return sum(args)
+
+print(sum_fun(1, 2))
