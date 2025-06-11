@@ -46,4 +46,9 @@ class MathTools:
 
 print(MathTools.add(3, 5))  # ✅ Called without object
 tool = MathTools()
-print(tool.add(3, 5))       # ✅ Al
+print(tool.add(3, 5))      # ✅ Also works, but not necessary
+
+# Tip:
+# Use @staticmethod when the function belongs logically to the class but doesn't need to touch any data from the class or instance.
+
+# If you want to access the class itself (but not the instance), use @classmethod.
