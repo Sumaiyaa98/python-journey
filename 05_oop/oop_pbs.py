@@ -11,9 +11,16 @@ class Car:
         self.brand = brand    # set the object's 'brand' attribute
         self.model = model    # set the object's 'model' attribute
 
+# 2. Class Method and Self
+# Problem: Add a method to the Car class that displays the full name of the car (brand and model).
+    def full_name(self):
+        return f"{self.brand} {self.model}"
+
+
 # Create an object (instance) of the Car class with brand "BMW" and model "m4"
 car_01 = Car("BMW", "m4")
 
 # Access the attributes of the object using dot notation
 print(car_01.brand)  # Output: BMW
 print(car_01.model)  # Output: m4
+print(car_01.full_name())
