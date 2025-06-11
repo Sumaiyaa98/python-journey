@@ -24,3 +24,39 @@ car_01 = Car("BMW", "m4")
 print(car_01.brand)  # Output: BMW
 print(car_01.model)  # Output: m4
 print(car_01.full_name())
+
+
+# 3. Inheritance
+# Problem: Create an ElectricCar class that inherits from the Car class and has an additional attribute battery_size.
+
+class ElectricCar(Car):
+    def __init__(self, brand, model,battery_size):
+        super().__init__(brand, model)
+        #super is used to inherit the method from our main class, we also have
+        #to pass the attribute as well
+        self.batter_size = battery_size
+
+my_electric_car = ElectricCar("Tesla","Model S","84kWh")
+print(my_electric_car.brand)
+print(my_electric_car.batter_size)
+print(my_electric_car.full_name())
+
+
+
+# 4. Encapsulation
+# Problem: Make the Person class to encapsulate the age attribute, making it private, and provide a getter method for it.
+class Person:
+    def __init__(self,name,age):
+        self.name = name
+        self.__age = age
+        #'__' used to make private attribute that can only access by using getter method for users
+    
+    def get__age(self):
+        return f"{self.__age}"
+
+person_01 = Person("Alex",29)
+print(person_01.name)
+print(person_01.get__age())
+
+    
+    
