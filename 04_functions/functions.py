@@ -73,3 +73,38 @@ def map_funtion(**kwargs):
 
 map_funtion(name = 'Alix',age = 29)
 map_funtion(name = 'Mike',age = 22,gpa=3.4)
+
+# 9. Generator Function with yield
+# Problem: Write a generator function that yields even numbers up to a specified limit.
+
+def even_generator(limit):
+    # Loop through even numbers from 2 to the given limit
+    for i in range(2, limit + 1, 2):
+        yield i  # 'yield' returns one value at a time and pauses the function until the next value is requested
+
+# 'yield' vs 'return':
+# - 'return' ends the function immediately and returns a single value
+# - 'yield' returns a value, but pauses the function state
+#   so that it can continue from the same point next time
+# - This makes 'yield' very memory-efficient for large sequences
+
+# Using the generator:
+for num in even_generator(10):
+    print(num)
+
+# Output:
+# 2
+# 4
+# 6
+# 8
+# 10
+
+
+# 10. Recursive Function
+# Problem: Create a recursive function to calculate the factorial of a number.
+
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
