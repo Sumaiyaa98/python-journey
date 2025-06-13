@@ -12,8 +12,19 @@ cursor.execute('''
 
 ''')
 
-def main():
+def list_videos():
     pass
+def main():
+    while True:
+        print("\nYoutube Manager App with DB")
+        print("1. List Videos")
+        print("2. Add Videos")
+        print("3. Delete Videos")
+        print("4. Exit")
+
+        choice = input("Enter your choice: ")
+        if choice == '1':
+            list_videos()
 
 if __name__ == "__main__":
     main()
