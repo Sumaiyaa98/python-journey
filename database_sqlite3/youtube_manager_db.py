@@ -14,6 +14,10 @@ cursor.execute('''
 
 def list_videos():
     pass
+
+def add_video():
+    pass
+
 def main():
     while True:
         print("\nYoutube Manager App with DB")
@@ -25,6 +29,15 @@ def main():
         choice = input("Enter your choice: ")
         if choice == '1':
             list_videos()
+        elif choice == '2':
+            name = input("Enter video name: ")
+            time = input("Enter video time: ")
+            add_video(name,time)
+        elif choice == '3':
+            input("Enter video ID to update: ")
+            name = input("Enter video name: ")
+            time = input("Enter video time: ")
+            add_video(name,time)
 
 if __name__ == "__main__":
     main()
