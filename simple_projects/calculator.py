@@ -58,3 +58,31 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+
+
+# The function get_number(prompt) doesn't need to be passed into other functions. You just call it directly wherever you need user input.
+
+# 📌 How it works:
+# Let’s say you write this inside your addition() function:
+
+
+# num1 = get_number("Enter first number: ")
+# num2 = get_number("Enter second number: ")
+# This means:
+
+# The function get_number() is called right there.
+
+# It asks the user for a number.
+
+# It returns the number back to num1 and num2.
+
+# So it’s like this:
+
+# def addition():
+#     num1 = get_number("Enter first number: ")  # it runs the input inside get_number
+#     num2 = get_number("Enter second number: ") # again runs it for the second input
+#     print(num1 + num2)
+# You are not passing get_number as a parameter, you're simply using (or invoking) it wherever needed, just like using input() or print().
+
