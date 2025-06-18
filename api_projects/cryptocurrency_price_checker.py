@@ -5,8 +5,8 @@ def cryptocurrency_price_check(coin_name):
     response = requests.get(url)
     data = response.json()
     if coin_name in data:
-        coin_name = data[f"{coin_name}"]["usd"]
-        return coin_name
+        price = data[f"{coin_name}"]["usd"]
+        return price
     else:
         raise Exception("Coin not found. Check spelling or try a different one.")
 
