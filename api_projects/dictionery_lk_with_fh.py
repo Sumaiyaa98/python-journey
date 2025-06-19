@@ -36,7 +36,7 @@ def main():
     all_words = load_data()
     while True:
 
-        user_input = input("Enter a name to search the meaning (or type 'exit'): ").lower()
+        user_input = input("Enter a word to search the meaning (or type 'exit'): ").lower()
         if user_input == "exit":
             break
      
@@ -52,7 +52,7 @@ def main():
                 "definition": definition
             }
 
-            all_words.append(word)
+            all_words.append(word_info)
             save_data(all_words)
 
         except Exception as e:
