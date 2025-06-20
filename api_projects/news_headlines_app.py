@@ -1,3 +1,5 @@
+from api_keys import news_api_key
+
 import requests
 import json
 
@@ -15,7 +17,7 @@ def save_data(news):
 
 
 def news_headlines_app(countr_name):
-    url = f"https://newsdata.io/api/1/news?apikey=pub_e2532dbf91a54aaa9fbf054dee939402&country={countr_name}&language=en"
+    url = f"https://newsdata.io/api/1/news?apikey={news_api_key}&country={countr_name}&language=en"
     response = requests.get(url)
     data = response.json()
     if data["status"] == 'success':
