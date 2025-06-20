@@ -20,10 +20,11 @@ def country_info_finder(country_name):
     if response.status_code == 200:
         official_name = data[0]['name']['official']
         region = data[0]['region']
+        capital = data[0]['capital'][0]
         population = data[0]['population']
         currency = data[0]['currencies']
         languages = data[0]['languages']
-        return official_name,region,population,currency,languages
+        return official_name,region,capital,population,currency,languages
     else:
         raise Exception("Country Details not found! Check spelling again")
 
@@ -38,8 +39,8 @@ def main():
             break
 
         try:
-            official_name,region,population,currency,languages = country_info_finder(country_name)
-            print(f"Official Name: {official_name}\nRegion: {region}\nPopulation: {population}\nCurrency: {currency}\nLanguages: {languages}")
+            official_name,region,capital,population,currency,languages = country_info_finder(country_name)
+            print(f"Official Name: {official_name}\nRegion: {region}\nCaptial City: {capital}\nPopulation: {population}\nCurrency: {currency}\nLanguages: {languages}")
 
             countr_info = {
                 'Official Name': official_name,
